@@ -13,12 +13,15 @@ import android.widget.ImageView;
 public class Camera extends AppCompatActivity {
     private ImageView myImage;
     private android.widget.Button Button;
+    private android.widget.Button Button1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
         myImage = (ImageView)findViewById(R.id.myImage);
         Button  = (Button)findViewById(R.id.snap);
+        Button1 = (Button)findViewById(R.id.create_Object);
+
 
         Button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,10 +30,22 @@ public class Camera extends AppCompatActivity {
             }
         });
 
+        Button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openObjectAdding();
+            }
+        });
+
     }
     public void takePicture(){
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         startActivityForResult(intent, 0);
+    }
+
+    public void openObjectAdding(){
+        Intent a = new Intent(this, objectAdding.class);
+        startActivity(a);
     }
     @Override
     protected void onActivityResult(int requestCode,int resultCode, Intent data ) {
