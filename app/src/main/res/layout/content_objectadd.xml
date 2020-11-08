@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/asset_id_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="(10 digit number)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/asset_object_id" />
+
+    <TextView
+        android:id="@+id/asset_object_id"
+        android:layout_width="100dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="299dp"
+        android:layout_marginRight="299dp"
+        android:text="SerialID:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/asset_name_input" />
+
+    <TextView
+        android:id="@+id/object_name"
+        android:layout_width="100dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="299dp"
+        android:layout_marginRight="299dp"
+        android:text="AssetName:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/asset_name_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Sprinklers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/object_name" />
+
+    <Button
+        android:id="@+id/addobject"
+        android:layout_width="210dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="250dp"
+        android:text="AddAsset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/asset_id_number" />
+
+    <Button
+        android:id="@+id/update_button"
+        android:layout_width="210dp"
+        android:layout_height="53dp"
+        android:text="Update"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addobject" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
