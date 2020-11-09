@@ -6,4 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".objectAdding">
 
+    <include
+        layout="@layout/content_objectadd"
+        android:layout_width="403dp"
+        android:layout_height="629dp"
+        android:layout_below="@+id/mapBar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="-1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="40dp" />
+
+
 </com.google.android.material.circularreveal.CircularRevealRelativeLayout>
