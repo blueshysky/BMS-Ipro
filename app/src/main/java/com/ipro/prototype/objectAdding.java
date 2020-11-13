@@ -2,16 +2,19 @@ package com.ipro.prototype;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class objectAdding extends AppCompatActivity {
     String name;
     int serialID;
-
+    ImageView someImage;
     EditText nameinput;
     EditText serialinput;
 
@@ -24,9 +27,16 @@ public class objectAdding extends AppCompatActivity {
         setContentView(R.layout.activity_object_adding);
         nameinput = (EditText) findViewById(R.id.asset_name_input);
         serialinput = (EditText) findViewById(R.id.asset_id_input);
-
+        someImage = (ImageView) findViewById(R.id.someimage) ;
         addButton = (Button) findViewById(R.id.addobject);
         updateButton = (Button)findViewById(R.id.update_button);
+        Intent tent = getIntent();
+
+        if(tent.hasExtra("yes"))  {
+            Bitmap bit = tent.getParcelableExtra("yes");
+            someImage.setImageBitmap(bit);
+        }
+
 
         updateButton.setOnClickListener(new View.OnClickListener() {
             @Override
