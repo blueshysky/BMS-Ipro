@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
@@ -45,7 +46,15 @@ public class Camera extends AppCompatActivity {
 
     public void openObjectAdding(){
         Intent a = new Intent(this, objectAdding.class);
-        startActivity(a);
+        if(myImage.getDrawable() == null){
+            startActivity(a);
+        }
+        else{
+            Bitmap bm = ((BitmapDrawable) myImage.getDrawable()).getBitmap();
+            a.putExtra("yes", bm);
+            startActivity(a);
+        }
+
     }
     @Override
     protected void onActivityResult(int requestCode,int resultCode, Intent data ) {

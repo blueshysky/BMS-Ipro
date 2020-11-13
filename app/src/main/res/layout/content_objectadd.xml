@@ -76,4 +76,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addobject" />
 
+    <ImageView
+        android:id="@+id/someimage"
+        android:layout_width="167dp"
+        android:layout_height="193dp"
+        app:layout_constraintBottom_toTopOf="@+id/addobject"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/asset_id_input"
+        app:srcCompat="@android:drawable/divider_horizontal_dark" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
